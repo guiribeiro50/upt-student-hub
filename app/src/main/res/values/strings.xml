@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">UPTStudentHub</string>
+
+    <string name="welcome_title">Welcome to UPT Student Hub</string>
+    <string name="hint_name">Your name</string>
+    <string name="cd_name_input">Student name input</string>
+    <string name="btn_open_timetable">OPEN MY TIMETABLE</string>
 </resources>
