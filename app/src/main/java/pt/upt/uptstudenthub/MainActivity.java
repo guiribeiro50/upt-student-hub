@@ -1,24 +1,32 @@
 package pt.upt.uptstudenthub;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+    private EditText editName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
+        editName = findViewById(R.id.editName);
+        Button buttonOpen = findViewById(R.id.buttonOpen); // não existe necessidade de uma variável global
+
+        buttonOpen.setOnClickListener(v -> openTimeTable());
+    }
+
+    private void openTimeTable() {
+        String name = editName.getText().toString().trim();
+
+        if (name.isEmpty()) {
+            editName.setError(getString(R.string.error_name_empty));
+            return;
+        }
     }
 }

@@ -5,4 +5,5 @@
     <string name="hint_name">Your name</string>
     <string name="cd_name_input">Student name input</string>
     <string name="btn_open_timetable">OPEN MY TIMETABLE</string>
+    <string name="error_name_empty">Please enter your name</string>
 </resources>
