@@ -28,5 +28,8 @@ public class MainActivity extends AppCompatActivity {
             editName.setError(getString(R.string.error_name_empty));
             return;
         }
+        Intent intent = new Intent(this, TimetableActivity.class);
+        intent.putExtra(TimetableActivity.EXTRA_STUDENT_NAME, name);
+        startActivity(intent);
     }
 }

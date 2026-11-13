@@ -6,4 +6,6 @@
     <string name="cd_name_input">Student name input</string>
     <string name="btn_open_timetable">OPEN MY TIMETABLE</string>
     <string name="error_name_empty">Please enter your name</string>
+
+    <string name="timetable_of">Timetable of %1$s</string>
 </resources>
