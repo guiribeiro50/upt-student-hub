@@ -8,4 +8,9 @@
     <string name="error_name_empty">Please enter your name</string>
 
     <string name="timetable_of">Timetable of %1$s</string>
+    <string name="status_idle">Ready to sync</string>
+    <string name="cd_progress">Synchronisation progress</string>
+    <string name="btn_sync">SYNC TIMETABLE</string>
+    <string name="btn_cancel">CANCEL</string>
+    <string name="tap_me">TAP ME (%1$d)</string>
 </resources>

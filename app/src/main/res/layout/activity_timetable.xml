@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="@dimen/spacing_medium"
     tools:context=".TimetableActivity">
 
     <TextView
@@ -12,5 +13,78 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/text_title"
         android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/status_idle"
+        android:textSize="@dimen/text_body"
+        android:layout_marginBottom="@dimen/spacing_small" />
+
+    <ProgressBar
+        android:id="@+id/progressSync"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="0"
+        android:contentDescription="@string/cd_progress"
+        android:layout_marginBottom="@dimen/spacing_medium" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/spacing_medium">
+
+        <Button
+            android:id="@+id/buttonSync"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/spacing_small"
+            android:minHeight="@dimen/touch_target"
+            android:text="@string/btn_sync"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/buttonCancel"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="@dimen/touch_target"
+            android:text="@string/btn_cancel"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonTap"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/touch_target"
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:enabled="false"
+        android:text="@string/tap_me" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="@dimen/spacing_medium">
+
+        <LinearLayout
+            android:id="@+id/listLessons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:divider="@drawable/divider"
+            android:showDividers="middle">
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
