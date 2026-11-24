@@ -43,10 +43,14 @@ public class TimetableViewModel extends ViewModel {
                 Collections.unmodifiableList(new ArrayList<>(Arrays.asList(source)));
 
         task = executor.submit(() -> {
+            int total = snapshot.size();
            try {
-               Thread.sleep(DELAY_MS);
-               mainHandler.post(() ->
-                       Log.d("Sync", "a trabalhar na thread: " + Thread.currentThread().getName()));
+               for (int i = 0; i < total; i++) {
+                   Thread.sleep(800);
+                   final String item = snapshot.get(i);
+                   final int percentage = (i + 1) * 100 / total;
+                   mainHandler.post(() -> deliver(item, percentage));
+               }
            } catch (InterruptedException e) {
                Thread.currentThread().interrupt();
            }
