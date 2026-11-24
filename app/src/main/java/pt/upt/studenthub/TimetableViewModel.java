@@ -18,6 +18,10 @@ public class TimetableViewModel extends ViewModel {
     private static final long DELAY_MS = 800;
     private final ExecutorService executor = Executors.newSingleThreadExecutor();
     private final Handler mainHandler = new Handler(Looper.getMainLooper());
+    private final MutableLiveData<SyncState> state = new MutableLiveData<>(SyncState.IDLE);
+    private final MutableLiveData<Integer> progress = new MutableLiveData<>(0);
+    private final MutableLiveData<List<String>> listSessions =
+            new MutableLiveData<>(Collections.<String>emptyList());
     private Future<?> task;
 
     public void startSync() {
@@ -30,5 +34,17 @@ public class TimetableViewModel extends ViewModel {
                Thread.currentThread().interrupt();
            }
         });
+    }
+
+    public MutableLiveData<SyncState> getState() {
+        return state;
+    }
+
+    public MutableLiveData<Integer> getProgress() {
+        return progress;
+    }
+
+    public MutableLiveData<List<String>> getListSessions() {
+        return listSessions;
     }
 }
