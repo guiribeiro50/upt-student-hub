@@ -14,8 +14,9 @@
     <string name="tap_me">TAP ME (%1$d)</string>
 
     <string name="status_idle">Ready to sync</string>
-    <string name="status_syncing">Syncing... %$1d%%</string>
+    <string name="status_syncing">Syncing… %1$d%%</string>
     <string name="status_completed">Sync complete: %1$d sessions</string>
+    <string name="status_cancelled">Sync cancelled</string>
 
     <string-array name="sessions">
         <item>Mon 09:00 - Mobile Apps Lab</item>

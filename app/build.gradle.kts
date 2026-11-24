@@ -9,7 +9,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "pt.upt.uptstudenthub"
+        applicationId = "pt.upt.studenthub"
         minSdk = 24
         targetSdk = 37
         versionCode = 1
