@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "pt.upt.uptstudenthub"
+    namespace = "pt.upt.studenthub"
     compileSdk {
         version = release(37)
     }

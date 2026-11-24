@@ -8,9 +8,21 @@
     <string name="error_name_empty">Please enter your name</string>
 
     <string name="timetable_of">Timetable of %1$s</string>
-    <string name="status_idle">Ready to sync</string>
     <string name="cd_progress">Synchronisation progress</string>
     <string name="btn_sync">SYNC TIMETABLE</string>
     <string name="btn_cancel">CANCEL</string>
     <string name="tap_me">TAP ME (%1$d)</string>
+
+    <string name="status_idle">Ready to sync</string>
+    <string name="status_syncing">Syncing... %$1d%%</string>
+    <string name="status_completed">Sync complete: %1$d sessions</string>
+
+    <string-array name="sessions">
+        <item>Mon 09:00 - Mobile Apps Lab</item>
+        <item>Mon 14:00 - Databases</item>
+        <item>Tue 10:00 - Software Eng.</item>
+        <item>Wed 11:00 - Computer Networks</item>
+        <item>Thu 09:00 — Operating Systems</item>
+        <item>Fri 14:00 — Web Technologies</item>
+    </string-array>
 </resources>

@@ -1,4 +1,4 @@
-package pt.upt.uptstudenthub;
+package pt.upt.studenthub;
 
 import android.content.Context;
 

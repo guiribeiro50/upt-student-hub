@@ -1,13 +1,9 @@
-package pt.upt.uptstudenthub;
+package pt.upt.studenthub;
 
 import android.os.Bundle;
 import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class TimetableActivity extends AppCompatActivity {
     public static final String EXTRA_STUDENT_NAME = "STUDENT_NAME";
