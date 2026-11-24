@@ -53,6 +53,12 @@ public class TimetableViewModel extends ViewModel {
         });
     }
 
+    private void deliver(String item, int percent) {
+        loaded.add(item);
+        sessions.setValue(Collections.unmodifiableList(new ArrayList<>(loaded)));
+        progress.setValue(percent);
+    }
+
     public MutableLiveData<SyncState> getState() {
         return state;
     }
@@ -61,7 +67,7 @@ public class TimetableViewModel extends ViewModel {
         return progress;
     }
 
-    public MutableLiveData<List<String>> getListSessions() {
-        return listSessions;
+    public MutableLiveData<List<String>> getSessions() {
+        return sessions;
     }
 }
